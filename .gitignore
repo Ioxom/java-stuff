@@ -11,8 +11,7 @@
 .mtj.tmp/
 # stuff
 stuff/out
-stuff/src/ca/ioxom/part1/alex
-stuff/src/ca/ioxom/part1/alex
+.idea
 
 # Package Files #
 *.jar
