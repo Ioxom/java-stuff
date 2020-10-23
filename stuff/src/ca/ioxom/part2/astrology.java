@@ -4,7 +4,7 @@ public class astrology {
     public static void main(String[] arrgs) {
         printTriangle(4);
         System.out.println();
-        christmasTree(10);
+        christmasTree(32);
     }
     public static void printSpaces(int number) {
         for (int i = 0; i < number; i++) {
@@ -23,7 +23,7 @@ public class astrology {
             asterisk.printStars(((height - 2) - i) * 2 + 1);
         }
         for (int i = 0; i < 2; i++) {
-            printSpaces(0); //unfinished
+            printSpaces(height - 3); //unfinished
             System.out.print("***");
             System.out.println();
         }
