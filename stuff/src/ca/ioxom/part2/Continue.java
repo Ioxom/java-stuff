@@ -8,7 +8,9 @@ public class Continue {
         Scanner scanner = new Scanner(System.in);
         while (!stop) {
             System.out.println("Shall we carry on?");
-            if (scanner.nextLine().equals("no")) { stop = true; }
+            if (scanner.nextLine().equals("no")) {
+                stop = true;
+            }
         }
     }
 }

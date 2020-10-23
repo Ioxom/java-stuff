@@ -3,6 +3,7 @@ package ca.ioxom.part2;
 public class printShapes {
     public static void main(String[] arrgs) {
         printRectangle(20, 7);
+        //print an empty line
         System.out.println();
         printSquare(3);
         System.out.println();

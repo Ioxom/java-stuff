@@ -2,6 +2,7 @@ package ca.ioxom.part2;
 
 public class smallestInt {
     public static int smallest(int number1, int number2) {
+        //cheat the system using java's built-in Math class
         return Math.min(number1, number2);
     }
 

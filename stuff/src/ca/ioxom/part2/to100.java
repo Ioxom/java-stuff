@@ -6,7 +6,7 @@ public class to100 {
     public static void main(String[] arrgs) {
         Scanner scanner = new Scanner(System.in);
         int number = Integer.parseInt(scanner.nextLine());
-        for (int i = number; i < 101; i++) {
+        for (int i = number; i <= 100; i++) {
             System.out.println(i);
         }
     }

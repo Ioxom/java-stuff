@@ -18,12 +18,14 @@ public class astrology {
         }
     }
     public static void christmasTree(int height) {
+        //height is decreased by 2 for the trunk
         for (int i = height - 2; i >= 0; i--) {
             printSpaces(i);
             asterisk.printStars(((height - 2) - i) * 2 + 1);
         }
+        //prints the trunk
         for (int i = 0; i < 2; i++) {
-            printSpaces(height - 3); //unfinished
+            printSpaces(height - 3);
             System.out.print("***");
             System.out.println();
         }

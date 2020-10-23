@@ -9,9 +9,11 @@ public class sumOfNumbers {
         while (true) {
             System.out.println("Give a number:");
             int addition = Integer.parseInt(scanner.nextLine());
+            //end if the input is 0
             if (addition == 0) {
                 break;
             }
+            //add to sum
             sum += addition;
         }
         System.out.println("sum of numbers: " + sum);
