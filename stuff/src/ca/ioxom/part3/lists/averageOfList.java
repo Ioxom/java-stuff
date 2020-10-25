@@ -3,7 +3,7 @@ package ca.ioxom.part3.lists;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class sumOfList {
+public class averageOfList {
     public static void main(String[] arrgs) {
         Scanner scanner = new Scanner(System.in);
         //get a list of integers
@@ -15,10 +15,11 @@ public class sumOfList {
             }
             list.add(input);
         }
+        //get the sum
         int sum = 0;
         for (int i : list) {
             sum += i;
         }
-        System.out.println("sum: " + sum);
+        System.out.println("average: " + ((double) sum / list.size()));
     }
 }
