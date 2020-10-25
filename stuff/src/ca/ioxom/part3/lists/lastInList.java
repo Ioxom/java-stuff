@@ -1,9 +1,9 @@
-package ca.ioxom.part3;
+package ca.ioxom.part3.lists;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class thirdValue {
+public class lastInList {
     public static void main(String[] arrgs) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> list = new ArrayList<>();
@@ -14,6 +14,6 @@ public class thirdValue {
             }
             list.add(input);
         }
-        System.out.println(list.get(2));
+        System.out.println(list.get(list.size() - 1));
     }
 }

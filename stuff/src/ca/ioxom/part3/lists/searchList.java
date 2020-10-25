@@ -1,4 +1,4 @@
-package ca.ioxom.part3;
+package ca.ioxom.part3.lists;
 
 import java.util.ArrayList;
 import java.util.Scanner;
