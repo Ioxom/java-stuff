@@ -2,7 +2,7 @@ package ca.ioxom.part3.lists;
 
 import java.util.ArrayList;
 
-public class listAverageMethod {
+public class sumMethod {
     public static int sum(ArrayList<Integer> numbers) {
         int sum = 0;
         for (int i : numbers) {

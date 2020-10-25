@@ -17,11 +17,10 @@ public class isInList {
         }
         System.out.println("Search for?");
         String search = scanner.nextLine();
-        for (String i : list) {
-            if (i.equals(search)) {
-                System.out.println(search + " was found");
-            }
+        if (list.contains(search)) {
+            System.out.println(search + "was found");
+        } else {
+            System.out.println(search + " was not found");
         }
-        System.out.println(search + " was not found");
     }
 }
