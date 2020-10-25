@@ -15,6 +15,7 @@ public class greatestInList {
             list.add(input);
         }
         int greatest = list.get(0);
+        //shorthand for a for loop that ends once it gets to list.size()
         for (Integer integer : list) {
             if (greatest < integer) {
                 greatest = integer;
