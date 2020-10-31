@@ -11,6 +11,7 @@
 .mtj.tmp/
 # stuff
 stuff/out
+out
 .idea
 
 # Package Files #
