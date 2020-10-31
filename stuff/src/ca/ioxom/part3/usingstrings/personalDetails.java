@@ -14,17 +14,15 @@ public class personalDetails {
             }
             list.add(input);
         }
-        String[] array = list.toArray(new String[0]);
         int index = 0;
-        int largestName = array[0].split(", ")[0].length();
+        int largestName = list.get(0).split(", ")[0].length();
         int birthYearSum = 0;
-        for (int i = 0; i < array.length; i++) {
-            if ((array[i].split(", ")[0].length()) > largestName) {
+        for (int i = 0; i < list.size(); i++) {
+            if ((list.get(i).split(", ")[0].length()) > largestName) {
                 index = i;
             }
-            System.out.println(i);
-            birthYearSum = birthYearSum + Integer.parseInt((array[i].split(", "))[1]);
+            birthYearSum = birthYearSum + Integer.parseInt((list.get(i).split(", "))[1]);
         }
-        System.out.println("longest name: " + array[index].split(", ")[0] + "\naverage birth year: " + ((double) birthYearSum / array.length));
+        System.out.println("longest name: " + list.get(index).split(", ")[0] + "\naverage birth year: " + ((double) birthYearSum / list.size()));
     }
 }
