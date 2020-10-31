@@ -1,4 +1,4 @@
-package ca.ioxom.part2;
+package ca.ioxom.fun;
 
 import java.util.Scanner;
 
