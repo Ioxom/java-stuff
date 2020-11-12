@@ -1,0 +1,4 @@
+"The exercise base contains a class SimpleDictionary that allows for storing words and their translations.
+ The internal implementation of the class contains some techniques not (yet) covered on the course."
+
+ looks like this one is a no
