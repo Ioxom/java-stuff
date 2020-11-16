@@ -108,10 +108,8 @@ public class GradeRegister {
 
     public static int pointsToGrades(int points) {
 
-        int grade = 0;
-        if (points < 50) {
-            grade = 0;
-        } else if (points < 60) {
+        int grade;
+        if (points < 60) {
             grade = 1;
         } else if (points < 70) {
             grade = 2;
