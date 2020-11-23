@@ -2,7 +2,7 @@ package ca.ioxom.part7.algorithms;
 
 import java.util.Arrays;
 
-public class MainProgram {
+public class Sorting {
     public static int smallest(int[] array) {
         int smallest = array[0];
         for (int i = 1; i < array.length; i++) {
@@ -32,7 +32,7 @@ public class MainProgram {
     public static void sort(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.println(Arrays.toString(array));
-            MainProgram.swap(array, i, indexOfSmallestFrom(array, i));
+            Sorting.swap(array, i, indexOfSmallestFrom(array, i));
         }
         System.out.println(Arrays.toString(array));
     }
