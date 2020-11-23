@@ -1,4 +1,4 @@
-package ca.ioxom.part7;
+package ca.ioxom.part7.paradigms;
 
 import java.util.Scanner;
 
