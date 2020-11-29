@@ -1,4 +1,4 @@
-package ca.ioxom.part8;
+package ca.ioxom.part8.recap;
 
 import java.util.Scanner;
 
