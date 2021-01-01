@@ -36,7 +36,7 @@ public class PaymentCard {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] arrgs) {
         PaymentCard paulsCard = new PaymentCard(20);
         PaymentCard mattsCard = new PaymentCard(30);
         paulsCard.eatHeartily();
