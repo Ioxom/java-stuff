@@ -28,7 +28,8 @@ public class Suitcase {
             itemCount++;
             weight += item.getWeight();
         }
-        return (itemCount > 0? (itemCount == 1? "1 item" : itemCount + " items") : "no items") + " (" + weight + " kg)";
+        String text = itemCount == 1? "1 item" : itemCount + " items";
+        return (itemCount > 0? text : "no items") + " (" + weight + " kg)";
     }
 
     public void printItems() {
@@ -59,7 +60,7 @@ public class Suitcase {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] arrgs) {
         Item book = new Item("Lord of the rings", 2);
         Item phone = new Item("Nokia 3210", 1);
         Item brick = new Item("Brick", 4);

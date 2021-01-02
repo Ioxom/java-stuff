@@ -17,7 +17,7 @@ public class Debt {
         this.balance *= this.interestRate;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] arrgs) {
 
         Debt mortgage = new Debt(120000.0, 1.01);
         mortgage.printBalance();
