@@ -9,16 +9,19 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SaveableDictionary {
-    private final List<String[]> translations;
+    private final List<String> translations;
+    private final List<String> words;
     private final String filePath;
 
     public SaveableDictionary() {
         translations = new ArrayList<>();
+        words = new ArrayList<>();
         filePath = null;
     }
 
     public SaveableDictionary(String file) {
         translations = new ArrayList<>();
+        words = new ArrayList<>();
         filePath = file;
     }
 
@@ -44,7 +47,10 @@ public class SaveableDictionary {
     public boolean save() {
         if (filePath != null) {
             try (PrintWriter writer = new PrintWriter(filePath)) {
-                translations.forEach(a -> writer.println(a[0] + ":" + a[1]));
+                for (int i = 0; i < translations.size(); i += 2) {
+                    writer.println(words.get(i) + ":" + translations.get(i));
+                }
+
                 return true;
             } catch (IOException e) {
                 return false;
@@ -55,38 +61,28 @@ public class SaveableDictionary {
     }
 
     public void add(String word, String translation) {
-        translations.add(new String[]{word, translation});
+        translations.add(translation);
+        words.add(word);
     }
 
     public String translate(String word) {
-        for (String[] array : translations) {
-            if (array[0].equals(word)) {
-                return array[1];
-            } else if (array[1].equals(word)) {
-                return array[0];
-            }
+        if (translations.contains(word)) {
+            return words.get(translations.indexOf(word));
+        } else if (words.contains(word)) {
+            return translations.get(words.indexOf(word));
+        } else {
+            return null;
         }
-
-        return null;
     }
 
     public void delete(String word) {
-        for (String[] next : translations) {
-            if (contains(next, word)) {
-                translations.remove(next);
-                break;
-            }
+        if (translations.contains(word)) {
+            words.remove(translate(word));
+            translations.remove(word);
+        } else if (words.contains(word)) {
+            translations.remove(translate(word));
+            words.remove(word);
         }
-    }
-
-    private boolean contains(String[] array, String target) {
-        for (final String i : array) {
-            if (target.equals(i)) {
-                return true;
-            }
-        }
-
-        return false;
     }
 
     public static void main(String[] args) {
@@ -117,7 +113,7 @@ public class SaveableDictionary {
         System.out.println(dictionary.translate("banaani"));
         System.out.println(dictionary.translate("ohjelmointi"));
 
-        dictionary.add("hrng", "crob");
+        dictionary.add("crob", "hrng");
 
         if (dictionary.save()) {
             System.out.println("saved");

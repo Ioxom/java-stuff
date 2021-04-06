@@ -1,4 +1,3 @@
-monkey:apina
-below:alla oleva
-beer:olut
-crob:hrng
+apina:monkey
+alla oleva:below
+olut:beer
